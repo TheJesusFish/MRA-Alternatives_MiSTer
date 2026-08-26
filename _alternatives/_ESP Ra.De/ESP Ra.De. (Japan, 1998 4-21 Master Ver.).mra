@@ -1,7 +1,7 @@
 <misterromdescription>
-  <name>ESP Ra.De. (Japan, 1998 4/14 Master Ver.)</name>
-  <mameversion>0226</mameversion>
-  <setname>espradejo</setname>
+  <name>ESP Ra.De. (Japan, 1998 4/21 Master Ver.)</name>
+  <mameversion>0289</mameversion>
+  <setname>espradej</setname>
   <year>1998</year>
   <manufacturer>CAVE</manufacturer>
   <category>Shooter</category>
@@ -9,7 +9,7 @@
   <rbf>cave</rbf>
 
   <!-- ROM data -->
-  <rom index="0" zip="espradejo.zip|esprade.zip" md5="none" address="0x30000000">
+  <rom index="0" zip="espradej.zip|esprade.zip" md5="none" address="0x30000000">
     <!-- prog ROM -->
     <interleave output="16">
       <part name="u42_ver.2" crc="75d03c42" map="01" />
@@ -54,7 +54,10 @@
   </rom>
 
   <!-- NVRAM -->
-  <nvram index="2" size="128" />
+  <nvram index="2" size="244" />
 
-  <buttons names="Main Shot,Power Shot,Guard Barrier,-,Start,Coin,Pause" default="A,B,X,R,L,Start" />
+  <!-- high-score RAM: start, length, first/last initialization bytes -->
+  <rom index="4"><part>00 10 23 B0 00 50 00 8C 00 10 22 EC 00 04 00 00</part></rom>
+
+  <buttons names="Main Shot,Power Shot,Guard Barrier,-,Start,Coin,Pause,-,-,SS" default="A,B,X,,R,L,Start" />
 </misterromdescription>
